@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User Search</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+
+    <main class="main-container dark-mode">
+        <section class="content-container p-3">
+
+            <header class="header d-flex justify-content-between align-items-center mb-2">
+                <a href="index.html" class="logo text-decoration-none text-light fs-5 fw-bold">Devfinder</a>
+                <div class="toggle-container d-flex align-items-center gap-2">
+                    <span class="mode-text text-light">Light</span>
+                    <svg class="mode-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1);">
+                        <path id="path"
+                            d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z">
+                        </path>
+                    </svg>
+                </div>
+            </header>
+
+
+            <form action="index.html" class="search-form">
+                <div class="search-container d-flex align-items-center p-2">
+                    <svg class="mx-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1);">
+                        <path
+                            d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z" />
+                    </svg>
+
+                    <input type="input" class="search-box" id="search-box" placeholder="Search Github Username...">
+                    <button class="search-btn">Search</button>
+                </div>
+            </form>
+
+            <section class="information-container mt-3">
+                <div class="row p-4">
+                    <div class="col-sm-3 p-0">
+                        <div
+                            class="avatar-container rounded-pill overflow-hidden mx-auto">
+                            <img class="avatar img-fluid" src="icon/avatar-icon.svg" alt="avatar-icon">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-9 p-0">
+                        <header class="title-container">
+                            <div class="d-flex align-items-end justify-content-between mb-1">
+                                <h1 class="title text-light fs-3 m-0">Username</h1>
+                                <span class="date text-light">Joined date</span>
+                            </div>
+                            <a class="user-link text-primary text-decoration-none" href="#" target="_blank">@username</a>
+                        </header>
+
+                        <main class="personel-content">
+                            <p class="bio text-white-50 w-75">This profile has no bio</p>
+                            <div class="user-info">
+                                <div class="row m-0 px-3 py-2" id="values">
+                                    <div class="col-sm-4 text-light d-flex flex-column">
+                                        <span class="user-title">Repos</span>
+                                        <span class="count" id="repos-count">0</span>
+                                    </div>
+                                    <div class="col-sm-4 text-light d-flex flex-column">
+                                        <span class="user-title">Followers</span>
+                                        <span class="count" id="followers-count">0</span>
+                                    </div>
+                                    <div class="col-sm-4 text-light d-flex flex-column">
+                                        <span class="user-title">Following</span>
+                                        <span class="count" id="following-count">0</span>
+                                    </div>
+                                </div>
+                                <div class="row m-0 text-light mt-4 gy-2">
+                                    <div class="col-sm-6 d-flex align-items-center gap-2 p-0">
+                                        <img src="icon/bxs-location-plus.svg" alt="location-icon">
+                                        <span class="personal text-white-50" id="country">Country</span>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center gap-2 p-0">
+                                        <img src="icon/bxl-twitter.svg" alt="x-icon">
+                                        <span class="personal text-white-50" id="twitter">twitter</span>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center gap-2 p-0">
+                                        <img src="icon/bx-stats.svg" alt="website-icon">
+                                        <span class="personal text-white-50" id="website">Website</span>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center gap-2 p-0">
+                                        <img src="icon/bx-envelope.svg" alt="github-icon">
+                                        <span class="personal text-white-50" id="email">email</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="./bundles/bundle.js"></script>
+
+
+</body>
+
+</html>
